@@ -6,17 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>我的导航 | Hexo</title>
+  <title>My test | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一个集成了所有重要链接的个人门户页面。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的导航">
-<meta property="og:url" content="http://example.com/portal/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="My test">
+<meta property="og:url" content="http://example.com/2025/10/31/My-test/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这是一个集成了所有重要链接的个人门户页面。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-31T08:17:12.956Z">
+<meta property="article:published_time" content="2025-10-31T06:57:41.000Z">
+<meta property="article:modified_time" content="2025-10-31T06:57:41.332Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -247,916 +245,167 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全能资源导航 - 发现优质网站与工具</title>
-    <style>
-        /* 基础变量 */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #9b59b6;
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --text-color: #333333;
-            --text-secondary: #666666;
-            --border-color: #e1e5e9;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-        }
+            <article id="post-My-test" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      My test
+    </h1>
+  
 
-        /* 暗色主题支持 */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --primary-color: #ecf0f1;
-                --secondary-color: #3498db;
-                --accent-color: #9b59b6;
-                --background-color: #1a1a1a;
-                --card-background: #2d3748;
-                --text-color: #e2e8f0;
-                --text-secondary: #a0aec0;
-                --border-color: #4a5568;
-            }
-        }
+        
+        <a href="/2025/10/31/My-test/" class="archive-article-date">
+  	<time datetime="2025-10-31T06:57:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
 
-        /* 基础重置 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .portal-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* 头部区域 */
-        .portal-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 30px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px;
-            color: white;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .avatar-container {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid rgba(255,255,255,0.3);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .avatar-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .portal-title {
-            font-size: 2.2em;
-            margin: 0 0 10px;
-            font-weight: 700;
-        }
-
-        .portal-subtitle {
-            font-size: 1.1em;
-            opacity: 0.9;
-            margin: 0;
-            font-weight: 300;
-        }
-
-        /* 搜索区域 */
-        .search-section {
-            margin: 30px 0;
-            position: relative;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #e1e5e9;
-            border-radius: 50px;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.3s ease;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .search-box:focus {
-            border-color: #49b1f5;
-            box-shadow: 0 4px 15px rgba(73, 177, 245, 0.2);
-        }
-
-        .search-stats {
-            text-align: center;
-            margin-top: 10px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* 分类区域 */
-        .category-section {
-            margin-bottom: 40px;
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid #f0f0f0;
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            font-size: 1.4em;
-            border-bottom: 2px solid #49b1f5;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .category-icon {
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
-        .link-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 15px;
-        }
-
-        /* 链接卡片 */
-        .link-card {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-            border: 1px solid #e9ecef;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .link-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.5s;
-        }
-
-        .link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-            background: white;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .link-card:hover::before {
-            left: 100%;
-        }
-
-        .link-icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            font-size: 16px;
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-        }
-
-        .link-card:hover .link-icon {
-            transform: scale(1.1);
-        }
-
-        .link-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .link-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-            font-size: 15px;
-            line-height: 1.3;
-        }
-
-        .link-desc {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.4;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        .link-hot {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: #ff4757;
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            transform: rotate(10deg);
-        }
-
-        /* 统计区域 */
-        .stats-section {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 40px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 10px 20px;
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .portal-container {
-                padding: 10px;
-            }
-            
-            .portal-title {
-                font-size: 1.8em;
-            }
-            
-            .category-section {
-                padding: 15px;
-            }
-            
-            .link-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 12px;
-            }
-            
-            .stats-section {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .link-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .portal-header {
-                padding: 20px 15px;
-            }
-            
-            .avatar-container {
-                width: 80px;
-                height: 80px;
-            }
-        }
-
-        /* 动画效果 */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .category-section {
-            animation: fadeInUp 0.5s ease forwards;
-        }
-
-        .category-section:nth-child(odd) {
-            animation-delay: 0.1s;
-        }
-
-        .category-section:nth-child(even) {
-            animation-delay: 0.2s;
-        }
-
-        /* 无结果提示 */
-        .no-results {
-            text-align: center;
-            padding: 3rem;
-            color: #666;
-            display: none;
-        }
-
-        /* 分类标签 */
-        .category-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-            justify-content: center;
-        }
-
-        .category-tag {
-            padding: 8px 16px;
-            background: #f1f3f5;
-            border-radius: 20px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .category-tag:hover, .category-tag.active {
-            background: #3498db;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="portal-container">
-        <!-- 头部区域 -->
-        <div class="portal-header">
-            <div class="avatar-container">
-                <img src="https://via.placeholder.com/100" alt="头像">
-            </div>
-            <h1 class="portal-title">全能资源导航</h1>
-            <p class="portal-subtitle">精心整理的优质网站与工具集合</p>
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>如果文章对您有帮助，欢迎打赏鼓励~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-
-        <!-- 搜索区域 -->
-        <div class="search-section">
-            <input type="text" id="linkSearch" class="search-box" placeholder="🔍 搜索工具或资源...">
-            <div class="search-stats">
-                已收录 <span id="totalLinks">0</span> 个优质资源
-            </div>
-        </div>
-
-        <!-- 分类标签 -->
-        <div class="category-tags" id="categoryTags">
-            <!-- 分类标签将通过JavaScript动态生成 -->
-        </div>
-
-        <!-- 统计区域 -->
-        <div class="stats-section">
-            <div class="stat-item">
-                <div class="stat-number" id="totalCategories">0</div>
-                <div class="stat-label">资源分类</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="totalTools">0</div>
-                <div class="stat-label">网站总数</div>
-            </div>
-        </div>
-
-        <!-- 链接分类区域 -->
-        <div id="categories-container">
-            <!-- 分类内容通过JavaScript动态生成 -->
-        </div>
-
-        <!-- 无结果提示 -->
-        <div id="no-results" class="no-results">
-            <p>没有找到匹配的资源，请尝试其他关键词</p>
-        </div>
-
-        <!-- 页脚统计 -->
-        <div style="text-align: center; margin: 40px 0 20px; color: #666; font-size: 14px;">
-            <p>© 2024 全能资源导航 • 持续更新优质网络资源</p>
-        </div>
+      
     </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
-    <script>
-        // 工具数据 - 12个分类，每组20个网站
-        const toolCategories = [
-            {
-                id: 'develop',
-                name: '开发编程',
-                icon: '💻',
-                tools: [
-                    { name: 'GitHub', description: '全球最大的代码托管平台', url: 'https://github.com/', icon: 'G', color: '#333333' },
-                    { name: 'Stack Overflow', description: '程序员问答社区', url: 'https://stackoverflow.com/', icon: 'S', color: '#f48024' },
-                    { name: 'MDN Web Docs', description: 'Web开发技术文档', url: 'https://developer.mozilla.org/', icon: 'M', color: '#83d0f2' },
-                    { name: 'CodePen', description: '在线前端代码编辑器', url: 'https://codepen.io/', icon: 'C', color: '#000000' },
-                    { name: 'JSFiddle', description: 'JavaScript在线测试', url: 'https://jsfiddle.net/', icon: 'J', color: '#0084ff' },
-                    { name: 'VSCode Web', description: '在线代码编辑器', url: 'https://vscode.dev/', icon: 'V', color: '#0078d7' },
-                    { name: 'GitLab', description: '开源代码托管平台', url: 'https://gitlab.com/', icon: 'G', color: '#fc6d26' },
-                    { name: 'Bitbucket', description: 'Atlassian代码托管', url: 'https://bitbucket.org/', icon: 'B', color: '#0052cc' },
-                    { name: 'CodeSandbox', description: '在线React开发环境', url: 'https://codesandbox.io/', icon: 'C', color: '#000000' },
-                    { name: 'Replit', description: '云端编程环境', url: 'https://replit.com/', icon: 'R', color: '#667881' },
-                    { name: 'LeetCode', description: '算法练习平台', url: 'https://leetcode.com/', icon: 'L', color: '#ffa116' },
-                    { name: 'HackerRank', description: '编程挑战平台', url: 'https://www.hackerrank.com/', icon: 'H', color: '#00ea64' },
-                    { name: 'freeCodeCamp', description: '免费编程学习平台', url: 'https://www.freecodecamp.org/', icon: 'F', color: '#0a0a23' },
-                    { name: 'W3Schools', description: 'Web开发教程', url: 'https://www.w3schools.com/', icon: 'W', color: '#04aa6d' },
-                    { name: 'CSS-Tricks', description: '前端开发技巧', url: 'https://css-tricks.com/', icon: 'C', color: '#ff7b29' },
-                    { name: 'Dev.to', description: '开发者社区', url: 'https://dev.to/', icon: 'D', color: '#0a0a0a' },
-                    { name: 'Dribbble', description: '设计师作品展示', url: 'https://dribbble.com/', icon: 'D', color: '#ea4c89' },
-                    { name: 'Figma', description: '在线UI设计工具', url: 'https://www.figma.com/', icon: 'F', color: '#f24e1e' },
-                    { name: 'Can I Use', description: '浏览器兼容性查询', url: 'https://caniuse.com/', icon: 'C', color: '#3cba54' },
-                    { name: 'NPM', description: 'JavaScript包管理器', url: 'https://www.npmjs.com/', icon: 'N', color: '#cb3837' }
-                ]
-            },
-            {
-                id: 'design',
-                name: '设计创意',
-                icon: '🎨',
-                tools: [
-                    { name: 'Behance', description: '创意设计作品展示', url: 'https://www.behance.net/', icon: 'B', color: '#1769ff' },
-                    { name: 'Dribbble', description: '设计师社区', url: 'https://dribbble.com/', icon: 'D', color: '#ea4c89' },
-                    { name: 'Pinterest', description: '创意灵感收集', url: 'https://www.pinterest.com/', icon: 'P', color: '#e60023' },
-                    { name: 'Adobe Creative Cloud', description: '创意软件套件', url: 'https://www.adobe.com/creativecloud.html', icon: 'A', color: '#ed2224' },
-                    { name: 'Figma', description: '协作式UI设计工具', url: 'https://www.figma.com/', icon: 'F', color: '#f24e1e' },
-                    { name: 'Sketch', description: '矢量UI设计工具', url: 'https://www.sketch.com/', icon: 'S', color: '#f7b500' },
-                    { name: 'Canva', description: '在线设计平台', url: 'https://www.canva.com/', icon: 'C', color: '#00c4cc' },
-                    { name: 'Unsplash', description: '免费高质量图片', url: 'https://unsplash.com/', icon: 'U', color: '#000000' },
-                    { name: 'Pexels', description: '免费素材图片', url: 'https://www.pexels.com/', icon: 'P', color: '#05a081' },
-                    { name: 'Pixabay', description: '免费图片和视频', url: 'https://pixabay.com/', icon: 'P', color: '#2ec66d' },
-                    { name: 'Freepik', description: '免费矢量图资源', url: 'https://www.freepik.com/', icon: 'F', color: '#10b981' },
-                    { name: 'Font Awesome', description: '图标字体库', url: 'https://fontawesome.com/', icon: 'F', color: '#528dd7' },
-                    { name: 'Google Fonts', description: '免费字体库', url: 'https://fonts.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'Coolors', description: '配色方案生成器', url: 'https://coolors.co/', icon: 'C', color: '#ff6b6b' },
-                    { name: 'UI Movement', description: 'UI动效灵感', url: 'https://uimovement.com/', icon: 'U', color: '#5e72e4' },
-                    { name: 'Awwwards', description: '优秀网站设计奖', url: 'https://www.awwwards.com/', icon: 'A', color: '#ff3366' },
-                    { name: 'SiteInspire', description: '网页设计灵感', url: 'https://www.siteinspire.com/', icon: 'S', color: '#333333' },
-                    { name: 'LottieFiles', description: '动画资源平台', url: 'https://lottiefiles.com/', icon: 'L', color: '#00d3a0' },
-                    { name: 'Iconfinder', description: '图标搜索平台', url: 'https://www.iconfinder.com/', icon: 'I', color: '#26a9e0' },
-                    { name: 'InVision', description: '原型设计工具', url: 'https://www.invisionapp.com/', icon: 'I', color: '#ff3366' }
-                ]
-            },
-            {
-                id: 'productivity',
-                name: '效率工具',
-                icon: '🚀',
-                tools: [
-                    { name: 'Notion', description: '一体化工作空间', url: 'https://www.notion.so/', icon: 'N', color: '#000000' },
-                    { name: 'Trello', description: '项目管理工具', url: 'https://trello.com/', icon: 'T', color: '#0079bf' },
-                    { name: 'Asana', description: '团队任务管理', url: 'https://asana.com/', icon: 'A', color: '#ff6b6b' },
-                    { name: 'Slack', description: '团队协作工具', url: 'https://slack.com/', icon: 'S', color: '#4a154b' },
-                    { name: 'Microsoft Teams', description: '团队协作平台', url: 'https://www.microsoft.com/teams', icon: 'M', color: '#6264a7' },
-                    { name: 'Zoom', description: '视频会议工具', url: 'https://zoom.us/', icon: 'Z', color: '#2d8cff' },
-                    { name: 'Google Workspace', description: '谷歌办公套件', url: 'https://workspace.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'Microsoft 365', description: '微软办公套件', url: 'https://www.microsoft.com/microsoft-365', icon: 'M', color: '#d83b01' },
-                    { name: 'Evernote', description: '笔记记录工具', url: 'https://evernote.com/', icon: 'E', color: '#00a82d' },
-                    { name: 'Todoist', description: '任务管理应用', url: 'https://todoist.com/', icon: 'T', color: '#e44332' },
-                    { name: 'Monday.com', description: '工作操作系统', url: 'https://monday.com/', icon: 'M', color: '#ff5246' },
-                    { name: 'Airtable', description: '电子表格数据库', url: 'https://airtable.com/', icon: 'A', color: '#ff4c00' },
-                    { name: 'Miro', description: '在线白板协作', url: 'https://miro.com/', icon: 'M', color: '#ffd02f' },
-                    { name: 'Figma', description: '设计协作平台', url: 'https://www.figma.com/', icon: 'F', color: '#f24e1e' },
-                    { name: 'Dropbox', description: '云存储服务', url: 'https://www.dropbox.com/', icon: 'D', color: '#0061ff' },
-                    { name: 'Google Drive', description: '谷歌云存储', url: 'https://drive.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'OneDrive', description: '微软云存储', url: 'https://onedrive.live.com/', icon: 'O', color: '#0078d7' },
-                    { name: 'Grammarly', description: '英文语法检查', url: 'https://www.grammarly.com/', icon: 'G', color: '#15c39a' },
-                    { name: 'Calendly', description: '会议安排工具', url: 'https://calendly.com/', icon: 'C', color: '#006bff' },
-                    { name: 'LastPass', description: '密码管理工具', url: 'https://www.lastpass.com/', icon: 'L', color: '#d32d27' }
-                ]
-            },
-            {
-                id: 'learning',
-                name: '学习资源',
-                icon: '📚',
-                tools: [
-                    { name: 'Coursera', description: '国际在线课程平台', url: 'https://www.coursera.org/', icon: 'C', color: '#0056d2' },
-                    { name: 'edX', description: '在线学习平台', url: 'https://www.edx.org/', icon: 'E', color: '#02262b' },
-                    { name: 'Khan Academy', description: '免费在线教育', url: 'https://www.khanacademy.org/', icon: 'K', color: '#14bf96' },
-                    { name: 'Udemy', description: '技能学习平台', url: 'https://www.udemy.com/', icon: 'U', color: '#a435f0' },
-                    { name: 'Udacity', description: '技术职业培训', url: 'https://www.udacity.com/', icon: 'U', color: '#01b3e3' },
-                    { name: 'LinkedIn Learning', description: '职场技能学习', url: 'https://www.linkedin.com/learning/', icon: 'L', color: '#0a66c2' },
-                    { name: 'Skillshare', description: '创意技能学习', url: 'https://www.skillshare.com/', icon: 'S', color: '#00ff99' },
-                    { name: 'FutureLearn', description: '英国在线学习平台', url: 'https://www.futurelearn.com/', icon: 'F', color: '#de0a6c' },
-                    { name: 'Codecademy', description: '互动编程学习', url: 'https://www.codecademy.com/', icon: 'C', color: '#1f4056' },
-                    { name: 'Duolingo', description: '语言学习应用', url: 'https://www.duolingo.com/', icon: 'D', color: '#58cc02' },
-                    { name: 'Memrise', description: '语言学习平台', url: 'https://www.memrise.com/', icon: 'M', color: '#ffca3d' },
-                    { name: 'Brilliant', description: '数学与科学学习', url: 'https://brilliant.org/', icon: 'B', color: '#000000' },
-                    { name: 'Wolfram Alpha', description: '计算知识引擎', url: 'https://www.wolframalpha.com/', icon: 'W', color: '#d43d3d' },
-                    { name: 'Google Scholar', description: '学术文献搜索', url: 'https://scholar.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'ResearchGate', description: '科研社交网络', url: 'https://www.researchgate.net/', icon: 'R', color: '#00d0a4' },
-                    { name: 'arXiv', description: '科学论文预印本', url: 'https://arxiv.org/', icon: 'A', color: '#b31b1b' },
-                    { name: 'JSTOR', description: '学术期刊数据库', url: 'https://www.jstor.org/', icon: 'J', color: '#357edd' },
-                    { name: 'MIT OpenCourseWare', description: 'MIT免费课程', url: 'https://ocw.mit.edu/', icon: 'M', color: '#a31f34' },
-                    { name: 'TED', description: '思想传播平台', url: 'https://www.ted.com/', icon: 'T', color: '#e62b1e' },
-                    { name: 'Wikipedia', description: '自由的百科全书', url: 'https://www.wikipedia.org/', icon: 'W', color: '#636466' }
-                ]
-            },
-            {
-                id: 'entertainment',
-                name: '影音娱乐',
-                icon: '🎮',
-                tools: [
-                    { name: 'Netflix', description: '流媒体视频平台', url: 'https://www.netflix.com/', icon: 'N', color: '#e50914' },
-                    { name: 'YouTube', description: '全球视频分享平台', url: 'https://www.youtube.com/', icon: 'Y', color: '#ff0000' },
-                    { name: 'Spotify', description: '音乐流媒体服务', url: 'https://open.spotify.com/', icon: 'S', color: '#1db954' },
-                    { name: 'Disney+', description: '迪士尼流媒体', url: 'https://www.disneyplus.com/', icon: 'D', color: '#113ccf' },
-                    { name: 'Amazon Prime Video', description: '亚马逊视频', url: 'https://www.primevideo.com/', icon: 'A', color: '#00a8e1' },
-                    { name: 'Hulu', description: '美国流媒体服务', url: 'https://www.hulu.com/', icon: 'H', color: '#1ce783' },
-                    { name: 'Twitch', description: '游戏直播平台', url: 'https://www.twitch.tv/', icon: 'T', color: '#9146ff' },
-                    { name: 'Steam', description: '数字游戏平台', url: 'https://store.steampowered.com/', icon: 'S', color: '#000000' },
-                    { name: 'Epic Games', description: '游戏平台', url: 'https://www.epicgames.com/store/', icon: 'E', color: '#2a2a2a' },
-                    { name: 'Apple Music', description: '苹果音乐服务', url: 'https://www.apple.com/apple-music/', icon: 'A', color: '#fa243c' },
-                    { name: 'SoundCloud', description: '音乐分享平台', url: 'https://soundcloud.com/', icon: 'S', color: '#ff3300' },
-                    { name: 'Pandora', description: '音乐流媒体', url: 'https://www.pandora.com/', icon: 'P', color: '#224099' },
-                    { name: 'Audible', description: '有声读物平台', url: 'https://www.audible.com/', icon: 'A', color: '#f7991c' },
-                    { name: 'Goodreads', description: '图书推荐社区', url: 'https://www.goodreads.com/', icon: 'G', color: '#553b08' },
-                    { name: 'IMDb', description: '电影数据库', url: 'https://www.imdb.com/', icon: 'I', color: '#f5c518' },
-                    { name: 'Rotten Tomatoes', description: '影视评论聚合', url: 'https://www.rottentomatoes.com/', icon: 'R', color: '#fa320a' },
-                    { name: 'Letterboxd', description: '电影社交网络', url: 'https://letterboxd.com/', icon: 'L', color: '#00c030' },
-                    { name: 'MyAnimeList', description: '动漫社区', url: 'https://myanimelist.net/', icon: 'M', color: '#2e51a2' },
-                    { name: 'Crunchyroll', description: '动漫流媒体', url: 'https://www.crunchyroll.com/', icon: 'C', color: '#f47521' },
-                    { name: 'Discord', description: '游戏社区平台', url: 'https://discord.com/', icon: 'D', color: '#5865f2' }
-                ]
-            },
-            {
-                id: 'business',
-                name: '商业金融',
-                icon: '💼',
-                tools: [
-                    { name: 'LinkedIn', description: '职业社交平台', url: 'https://www.linkedin.com/', icon: 'L', color: '#0a66c2' },
-                    { name: 'Glassdoor', description: '公司评价平台', url: 'https://www.glassdoor.com/', icon: 'G', color: '#0caa41' },
-                    { name: 'Indeed', description: '求职招聘网站', url: 'https://www.indeed.com/', icon: 'I', color: '#2164f3' },
-                    { name: 'AngelList', description: '初创公司招聘', url: 'https://angel.co/', icon: 'A', color: '#000000' },
-                    { name: 'Crunchbase', description: '公司信息数据库', url: 'https://www.crunchbase.com/', icon: 'C', color: '#0288d1' },
-                    { name: 'Bloomberg', description: '财经新闻平台', url: 'https://www.bloomberg.com/', icon: 'B', color: '#000000' },
-                    { name: 'Yahoo Finance', description: '金融信息平台', url: 'https://finance.yahoo.com/', icon: 'Y', color: '#720e9e' },
-                    { name: 'Google Finance', description: '谷歌财经', url: 'https://www.google.com/finance', icon: 'G', color: '#4285f4' },
-                    { name: 'Investopedia', description: '金融教育平台', url: 'https://www.investopedia.com/', icon: 'I', color: '#0d8038' },
-                    { name: 'MarketWatch', description: '金融市场新闻', url: 'https://www.marketwatch.com/', icon: 'M', color: '#ff6400' },
-                    { name: 'The Motley Fool', description: '投资建议网站', url: 'https://www.fool.com/', icon: 'M', color: '#81b442' },
-                    { name: 'Seeking Alpha', description: '投资研究平台', url: 'https://seekingalpha.com/', icon: 'S', color: '#0cb9ed' },
-                    { name: 'Robinhood', description: '免佣金股票交易', url: 'https://robinhood.com/', icon: 'R', color: '#00c805' },
-                    { name: 'E*TRADE', description: '在线券商', url: 'https://us.etrade.com/', icon: 'E', color: '#663399' },
-                    { name: 'Coinbase', description: '加密货币交易所', url: 'https://www.coinbase.com/', icon: 'C', color: '#0052ff' },
-                    { name: 'Binance', description: '加密货币交易平台', url: 'https://www.binance.com/', icon: 'B', color: '#f0b90b' },
-                    { name: 'PayPal', description: '在线支付平台', url: 'https://www.paypal.com/', icon: 'P', color: '#003087' },
-                    { name: 'Stripe', description: '在线支付处理', url: 'https://stripe.com/', icon: 'S', color: '#635bff' },
-                    { name: 'Square', description: '支付解决方案', url: 'https://squareup.com/', icon: 'S', color: '#3d434d' },
-                    { name: 'Shopify', description: '电子商务平台', url: 'https://www.shopify.com/', icon: 'S', color: '#95bf46' }
-                ]
-            },
-            {
-                id: 'news',
-                name: '新闻资讯',
-                icon: '📰',
-                tools: [
-                    { name: 'Google News', description: '谷歌新闻聚合', url: 'https://news.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'BBC News', description: '英国广播公司新闻', url: 'https://www.bbc.com/news', icon: 'B', color: '#bb1919' },
-                    { name: 'CNN', description: '美国有线电视新闻网', url: 'https://edition.cnn.com/', icon: 'C', color: '#cc0000' },
-                    { name: 'The New York Times', description: '纽约时报', url: 'https://www.nytimes.com/', icon: 'N', color: '#000000' },
-                    { name: 'The Guardian', description: '卫报', url: 'https://www.theguardian.com/international', icon: 'G', color: '#14284a' },
-                    { name: 'Reuters', description: '路透社', url: 'https://www.reuters.com/', icon: 'R', color: '#ff8000' },
-                    { name: 'Associated Press', description: '美联社', url: 'https://apnews.com/', icon: 'A', color: '#ff2a00' },
-                    { name: 'The Wall Street Journal', description: '华尔街日报', url: 'https://www.wsj.com/', icon: 'W', color: '#007c92' },
-                    { name: 'The Washington Post', description: '华盛顿邮报', url: 'https://www.washingtonpost.com/', icon: 'W', color: '#231f20' },
-                    { name: 'USA Today', description: '今日美国', url: 'https://www.usatoday.com/', icon: 'U', color: '#004da8' },
-                    { name: 'NPR', description: '美国国家公共电台', url: 'https://www.npr.org/', icon: 'N', color: '#bd1b2d' },
-                    { name: 'Al Jazeera', description: '半岛电视台', url: 'https://www.aljazeera.com/', icon: 'A', color: '#005f85' },
-                    { name: 'The Economist', description: '经济学人', url: 'https://www.economist.com/', icon: 'E', color: '#e3120b' },
-                    { name: 'Time', description: '时代周刊', url: 'https://time.com/', icon: 'T', color: '#e41e26' },
-                    { name: 'Forbes', description: '福布斯', url: 'https://www.forbes.com/', icon: 'F', color: '#ff0000' },
-                    { name: 'Business Insider', description: '商业内幕', url: 'https://www.businessinsider.com/', icon: 'B', color: '#033168' },
-                    { name: 'TechCrunch', description: '科技新闻网站', url: 'https://techcrunch.com/', icon: 'T', color: '#00a562' },
-                    { name: 'The Verge', description: '科技媒体', url: 'https://www.theverge.com/', icon: 'V', color: '#000000' },
-                    { name: 'Wired', description: '科技文化杂志', url: 'https://www.wired.com/', icon: 'W', color: '#000000' },
-                    { name: 'Mashable', description: '数字媒体平台', url: 'https://mashable.com/', icon: 'M', color: '#00aeef' }
-                ]
-            },
-            {
-                id: 'health',
-                name: '健康生活',
-                icon: '🏥',
-                tools: [
-                    { name: 'WebMD', description: '健康信息网站', url: 'https://www.webmd.com/', icon: 'W', color: '#70c217' },
-                    { name: 'Mayo Clinic', description: '医疗信息网站', url: 'https://www.mayoclinic.org/', icon: 'M', color: '#004b87' },
-                    { name: 'Healthline', description: '健康信息平台', url: 'https://www.healthline.com/', icon: 'H', color: '#00a878' },
-                    { name: 'MyFitnessPal', description: '健身与营养追踪', url: 'https://www.myfitnesspal.com/', icon: 'M', color: '#f15a24' },
-                    { name: 'Fitbit', description: '健康追踪应用', url: 'https://www.fitbit.com/', icon: 'F', color: '#00b0b9' },
-                    { name: 'Headspace', description: '冥想应用', url: 'https://www.headspace.com/', icon: 'H', color: '#f48f01' },
-                    { name: 'Calm', description: '冥想与睡眠应用', url: 'https://www.calm.com/', icon: 'C', color: '#42a5f5' },
-                    { name: 'Noom', description: '健康减肥应用', url: 'https://www.noom.com/', icon: 'N', color: '#ff6b6b' },
-                    { name: 'Peloton', description: '健身课程平台', url: 'https://www.onepeloton.com/', icon: 'P', color: '#000000' },
-                    { name: 'Strava', description: '运动社交网络', url: 'https://www.strava.com/', icon: 'S', color: '#fc4c02' },
-                    { name: 'Nike Training Club', description: '健身应用', url: 'https://www.nike.com/ntc-app', icon: 'N', color: '#000000' },
-                    { name: 'AllTrails', description: '户外徒步路线', url: 'https://www.alltrails.com/', icon: 'A', color: '#48bb78' },
-                    { name: 'Yoga with Adriene', description: '瑜伽教学', url: 'https://yogawithadriene.com/', icon: 'Y', color: '#e53e3e' },
-                    { name: 'Sleep Cycle', description: '睡眠追踪应用', url: 'https://www.sleepcycle.com/', icon: 'S', color: '#4a5568' },
-                    { name: 'WaterMinder', description: '饮水提醒应用', url: 'https://waterminder.com/', icon: 'W', color: '#3182ce' },
-                    { name: 'GoodRx', description: '处方药价格比较', url: 'https://www.goodrx.com/', icon: 'G', color: '#56d9b0' },
-                    { name: 'CDC', description: '美国疾控中心', url: 'https://www.cdc.gov/', icon: 'C', color: '#004b87' },
-                    { name: 'WHO', description: '世界卫生组织', url: 'https://www.who.int/', icon: 'W', color: '#0093d5' },
-                    { name: 'MedlinePlus', description: '健康信息数据库', url: 'https://medlineplus.gov/', icon: 'M', color: '#3366cc' },
-                    { name: 'Psychology Today', description: '心理学资源', url: 'https://www.psychologytoday.com/', icon: 'P', color: '#d32d27' }
-                ]
-            },
-            {
-                id: 'travel',
-                name: '旅行交通',
-                icon: '✈️',
-                tools: [
-                    { name: 'Google Flights', description: '航班搜索比价', url: 'https://www.google.com/flights', icon: 'G', color: '#4285f4' },
-                    { name: 'Skyscanner', description: '航班酒店搜索', url: 'https://www.skyscanner.com/', icon: 'S', color: '#00a698' },
-                    { name: 'Kayak', description: '旅行搜索引擎', url: 'https://www.kayak.com/', icon: 'K', color: '#ff5a5f' },
-                    { name: 'Booking.com', description: '酒店预订平台', url: 'https://www.booking.com/', icon: 'B', color: '#003580' },
-                    { name: 'Airbnb', description: '民宿预订平台', url: 'https://www.airbnb.com/', icon: 'A', color: '#ff5a5f' },
-                    { name: 'TripAdvisor', description: '旅行点评网站', url: 'https://www.tripadvisor.com/', icon: 'T', color: '#34e0a1' },
-                    { name: 'Expedia', description: '在线旅游公司', url: 'https://www.expedia.com/', icon: 'E', color: '#ff5a5f' },
-                    { name: 'Agoda', description: '酒店预订平台', url: 'https://www.agoda.com/', icon: 'A', color: '#ff5a5f' },
-                    { name: 'Hostelworld', description: '青旅预订平台', url: 'https://www.hostelworld.com/', icon: 'H', color: '#f15a22' },
-                    { name: 'Rome2rio', description: '多式联运路线规划', url: 'https://www.rome2rio.com/', icon: 'R', color: '#00a0e9' },
-                    { name: 'Google Maps', description: '地图导航服务', url: 'https://maps.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'Waze', description: '社区导航应用', url: 'https://www.waze.com/', icon: 'W', color: '#3333cc' },
-                    { name: 'Uber', description: '网约车平台', url: 'https://www.uber.com/', icon: 'U', color: '#000000' },
-                    { name: 'Lyft', description: '网约车平台', url: 'https://www.lyft.com/', icon: 'L', color: '#ff00bf' },
-                    { name: 'Google Translate', description: '翻译工具', url: 'https://translate.google.com/', icon: 'G', color: '#4285f4' },
-                    { name: 'XE Currency', description: '货币汇率转换', url: 'https://www.xe.com/', icon: 'X', color: '#002654' },
-                    { name: 'Weather.com', description: '天气预报', url: 'https://weather.com/', icon: 'W', color: '#2e7eed' },
-                    { name: 'Lonely Planet', description: '旅行指南', url: 'https://www.lonelyplanet.com/', icon: 'L', color: '#0099e5' },
-                    { name: 'Atlas Obscura', description: '独特旅行地点', url: 'https://www.atlasobscura.com/', icon: 'A', color: '#fd5948' },
-                    { name: 'Culture Trip', description: '文化旅行指南', url: 'https://theculturetrip.com/', icon: 'C', color: '#ff4f4f' }
-                ]
-            },
-            {
-                id: 'shopping',
-                name: '购物消费',
-                icon: '🛒',
-                tools: [
-                    { name: 'Amazon', description: '全球电商平台', url: 'https://www.amazon.com/', icon: 'A', color: '#ff9900' },
-                    { name: 'eBay', description: '在线拍卖和购物', url: 'https://www.ebay.com/', icon: 'E', color: '#e53238' },
-                    { name: 'AliExpress', description: '阿里巴巴国际站', url: 'https://www.aliexpress.com/', icon: 'A', color: '#ff6a00' },
-                    { name: 'Walmart', description: '沃尔玛在线商城', url: 'https://www.walmart.com/', icon: 'W', color: '#0071ce' },
-                    { name: 'Target', description: '塔吉特在线商城', url: 'https://www.target.com/', icon: 'T', color: '#cc0000' },
-                    { name: 'Best Buy', description: '电子产品零售商', url: 'https://www.bestbuy.com/', icon: 'B', color: '#0046be' },
-                    { name: 'Etsy', description: '手工艺品电商', url: 'https://www.etsy.com/', icon: 'E', color: '#f16521' },
-                    { name: 'Newegg', description: '电子产品电商', url: 'https://www.newegg.com/', icon: 'N', color: '#004b91' },
-                    { name: 'Wayfair', description: '家居用品电商', url: 'https://www.wayfair.com/', icon: 'W', color: '#7ac142' },
-                    { name: 'Zappos', description: '鞋类电商', url: 'https://www.zappos.com/', icon: 'Z', color: '#000000' },
-                    { name: 'Sephora', description: '美妆产品零售商', url: 'https://www.sephora.com/', icon: 'S', color: '#e40046' },
-                    { name: 'Ulta Beauty', description: '美妆零售商', url: 'https://www.ulta.com/', icon: 'U', color: '#e40046' },
-                    { name: 'Home Depot', description: '家居建材零售商', url: 'https://www.homedepot.com/', icon: 'H', color: '#f96302' },
-                    { name: 'Lowe\'s', description: '家居建材零售商', url: 'https://www.lowes.com/', icon: 'L', color: '#004990' },
-                    { name: 'IKEA', description: '宜家家居', url: 'https://www.ikea.com/', icon: 'I', color: '#ffcc00' },
-                    { name: 'Costco', description: '仓储式零售商', url: 'https://www.costco.com/', icon: 'C', color: '#e31837' },
-                    { name: 'Macy\'s', description: '百货公司', url: 'https://www.macys.com/', icon: 'M', color: '#e21836' },
-                    { name: 'Nordstrom', description: '高档百货公司', url: 'https://www.nordstrom.com/', icon: 'N', color: '#000000' },
-                    { name: 'ASOS', description: '时尚电商', url: 'https://www.asos.com/', icon: 'A', color: '#000000' },
-                    { name: 'Zara', description: '快时尚品牌', url: 'https://www.zara.com/', icon: 'Z', color: '#000000' }
-                ]
-            },
-            {
-                id: 'hidden-gems',
-                name: '冷门高质量网站',
-                icon: '💎',
-                tools: [
-                    { name: 'Product Hunt', description: '新产品发现平台', url: 'https://www.producthunt.com/', icon: 'P', color: '#da552f' },
-                    { name: 'Are.na', description: '视觉知识管理平台', url: 'https://www.are.na/', icon: 'A', color: '#000000' },
-                    { name: 'Glitch', description: '协作式编程平台', url: 'https://glitch.com/', icon: 'G', color: '#0033cc' },
-                    { name: 'Notion.so', description: '一体化工作空间', url: 'https://www.notion.so/', icon: 'N', color: '#000000' },
-                    { name: 'Obsidian', description: '知识管理工具', url: 'https://obsidian.md/', icon: 'O', color: '#7c3aed' },
-                    { name: 'Raindrop.io', description: '书签管理工具', url: 'https://raindrop.io/', icon: 'R', color: '#3d7ef7' },
-                    { name: 'Carrd', description: '简单单页网站制作', url: 'https://carrd.co/', icon: 'C', color: '#222222' },
-                    { name: 'Super.so', description: 'Notion转网站工具', url: 'https://super.so/', icon: 'S', color: '#000000' },
-                    { name: 'Tilda', description: '无代码网站建设', url: 'https://tilda.cc/', icon: 'T', color: '#000000' },
-                    { name: 'Webflow', description: '可视化网站开发', url: 'https://webflow.com/', icon: 'W', color: '#4353ff' },
-                    { name: 'Bubble', description: '无代码应用开发', url: 'https://bubble.io/', icon: 'B', color: '#e61e4d' },
-                    { name: 'Airtable', description: '电子表格数据库', url: 'https://airtable.com/', icon: 'A', color: '#ff4c00' },
-                    { name: 'Coda', description: '文档应用平台', url: 'https://coda.io/', icon: 'C', color: '#ee4c4c' },
-                    { name: 'Roam Research', description: '网络化思维工具', url: 'https://roamresearch.com/', icon: 'R', color: '#5a45ff' },
-                    { name: 'Readwise', description: '阅读内容管理', url: 'https://readwise.io/', icon: 'R', color: '#5a45ff' },
-                    { name: 'Pocket', description: '稍后阅读工具', url: 'https://getpocket.com/', icon: 'P', color: '#ef4056' },
-                    { name: 'Instapaper', description: '稍后阅读工具', url: 'https://www.instapaper.com/', icon: 'I', color: '#1f1f1f' },
-                    { name: 'Feedly', description: '资讯聚合平台', url: 'https://feedly.com/', icon: 'F', color: '#2bb24c' },
-                    { name: 'Refind', description: '个性化内容推荐', url: 'https://refind.com/', icon: 'R', color: '#000000' },
-                    { name: 'Stripe Press', description: '商业与科技书籍', url: 'https://press.stripe.com/', icon: 'S', color: '#635bff' }
-                ]
-            },
-            {
-                id: 'navigation',
-                name: '导航与友链',
-                icon: '🔗',
-                tools: [
-                    { name: 'Product Hunt', description: '新产品发现平台', url: 'https://www.producthunt.com/', icon: 'P', color: '#da552f' },
-                    { name: 'Hacker News', description: '技术新闻社区', url: 'https://news.ycombinator.com/', icon: 'H', color: '#ff6600' },
-                    { name: 'Lobsters', description: '技术链接分享', url: 'https://lobste.rs/', icon: 'L', color: '#ae6800' },
-                    { name: 'Indie Hackers', description: '独立开发者社区', url: 'https://www.indiehackers.com/', icon: 'I', color: '#2f3e46' },
-                    { name: 'Makerpad', description: '无代码教程平台', url: 'https://www.makerpad.co/', icon: 'M', color: '#000000' },
-                    { name: 'No-Code List', description: '无代码工具目录', url: 'https://nocodelist.co/', icon: 'N', color: '#3b82f6' },
-                    { name: 'Awesome GitHub', description: 'GitHub资源合集', url: 'https://github.com/sindresorhus/awesome', icon: 'A', color: '#333333' },
-                    { name: 'GitHub Trending', description: 'GitHub热门项目', url: 'https://github.com/trending', icon: 'G', color: '#333333' },
-                    { name: 'AlternativeTo', description: '软件替代品查询', url: 'https://alternativeto.net/', icon: 'A', color: '#00bcd4' },
-                    { name: 'Slant', description: '产品比较平台', url: 'https://www.slant.co/', icon: 'S', color: '#ff5a00' },
-                    { name: 'G2', description: '软件评测平台', url: 'https://www.g2.com/', icon: 'G', color: '#ff6200' },
-                    { name: 'Capterra', description: '软件评测平台', url: 'https://www.capterra.com/', icon: 'C', color: '#00b4b3' },
-                    { name: 'Productive Fish', description: '生产力工具导航', url: 'https://productive.fish/', icon: 'P', color: '#3b82f6' },
-                    { name: 'Startup Stash', description: '创业资源导航', url: 'https://startupstash.com/', icon: 'S', color: '#3d5afe' },
-                    { name: 'Remote Tools', description: '远程工作工具', url: 'https://www.remote.tools/', icon: 'R', color: '#3b82f6' },
-                    { name: 'Nomad List', description: '数字游民指南', url: 'https://nomadlist.com/', icon: 'N', color: '#6b48ff' },
-                    { name: 'Remote OK', description: '远程工作机会', url: 'https://remoteok.com/', icon: 'R', color: '#00c46b' },
-                    { name: 'We Work Remotely', description: '远程工作招聘', url: 'https://weworkremotely.com/', icon: 'W', color: '#2d7fd6' },
-                    { name: 'Designer News', description: '设计师社区', url: 'https://www.designernews.co/', icon: 'D', color: '#2d7fd6' },
-                    { name: 'Sidebar', description: '设计资源精选', url: 'https://sidebar.io/', icon: 'S', color: '#ff5722' }
-                ]
-            }
-        ];
+      
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // 初始化页面
-            renderCategories();
-            setupSearch();
-            updateStats();
-            setupCategoryTags();
-            
-            // 搜索功能
-            const searchInput = document.getElementById('linkSearch');
-            const linkCards = document.querySelectorAll('.link-card');
-            const totalLinksElement = document.getElementById('totalLinks');
-            const noResultsElement = document.getElementById('no-results');
-            
-            // 更新链接总数
-            totalLinksElement.textContent = calculateTotalTools();
-            
-            function calculateTotalTools() {
-                return toolCategories.reduce((total, category) => total + category.tools.length, 0);
-            }
-            
-            function renderCategories(categories = toolCategories) {
-                const container = document.getElementById('categories-container');
-                let html = '';
-                
-                categories.forEach(category => {
-                    if (category.tools.length === 0) return;
-                    
-                    html += `
-                        <div class="category-section" data-category="${category.id}">
-                            <h2 class="category-header">
-                                <span class="category-icon">${category.icon}</span> ${category.name}
-                            </h2>
-                            <div class="link-grid">
-                                ${category.tools.map(tool => `
-                                    <a href="${tool.url}" class="link-card" target="_blank" rel="noopener">
-                                        <div class="link-icon" style="background: ${tool.color};">${tool.icon}</div>
-                                        <div class="link-content">
-                                            <div class="link-title">${tool.name}</div>
-                                            <div class="link-desc">${tool.description}</div>
-                                        </div>
-                                    </a>
-                                `).join('')}
-                            </div>
-                        </div>
-                    `;
-                });
-                
-                container.innerHTML = html;
-                
-                // 重新获取所有链接卡片
-                window.allLinkCards = document.querySelectorAll('.link-card');
-            }
-            
-            function setupSearch() {
-                searchInput.addEventListener('input', function() {
-                    const searchTerm = this.value.toLowerCase().trim();
-                    performSearch(searchTerm);
-                });
-            }
-            
-            function performSearch(searchTerm) {
-                if (!searchTerm) {
-                    renderCategories();
-                    noResultsElement.style.display = 'none';
-                    totalLinksElement.textContent = calculateTotalTools();
-                    return;
-                }
-                
-                const filteredCategories = toolCategories.map(category => {
-                    const filteredTools = category.tools.filter(tool => 
-                        tool.name.toLowerCase().includes(searchTerm) || 
-                        tool.description.toLowerCase().includes(searchTerm)
-                    );
-                    
-                    return {
-                        ...category,
-                        tools: filteredTools
-                    };
-                }).filter(category => category.tools.length > 0);
-                
-                if (filteredCategories.length > 0) {
-                    renderCategories(filteredCategories);
-                    noResultsElement.style.display = 'none';
-                    
-                    // 更新显示的链接数量
-                    const visibleCount = filteredCategories.reduce((total, category) => total + category.tools.length, 0);
-                    totalLinksElement.textContent = visibleCount;
-                } else {
-                    document.getElementById('categories-container').innerHTML = '';
-                    noResultsElement.style.display = 'block';
-                    totalLinksElement.textContent = '0';
-                }
-            }
-            
-            function updateStats() {
-                document.getElementById('totalCategories').textContent = toolCategories.length;
-                document.getElementById('totalTools').textContent = calculateTotalTools();
-            }
-            
-            function setupCategoryTags() {
-                const tagsContainer = document.getElementById('categoryTags');
-                let tagsHTML = '<div class="category-tag active" data-category="all">全部</div>';
-                
-                toolCategories.forEach(category => {
-                    tagsHTML += `<div class="category-tag" data-category="${category.id}">${category.icon} ${category.name}</div>`;
-                });
-                
-                tagsContainer.innerHTML = tagsHTML;
-                
-                // 添加标签点击事件
-                const tags = document.querySelectorAll('.category-tag');
-                tags.forEach(tag => {
-                    tag.addEventListener('click', function() {
-                        const categoryId = this.getAttribute('data-category');
-                        
-                        // 更新标签状态
-                        tags.forEach(t => t.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        if (categoryId === 'all') {
-                            // 显示所有分类
-                            document.querySelectorAll('.category-section').forEach(section => {
-                                section.style.display = 'block';
-                            });
-                        } else {
-                            // 只显示选中的分类
-                            document.querySelectorAll('.category-section').forEach(section => {
-                                if (section.getAttribute('data-category') === categoryId) {
-                                    section.style.display = 'block';
-                                } else {
-                                    section.style.display = 'none';
-                                }
-                            });
-                        }
-                    });
-                });
-            }
-            
-            // 添加快捷键支持
-            document.addEventListener('keydown', function(e) {
-                if (e.ctrlKey && e.key === 'k') {
-                    e.preventDefault();
-                    searchInput.focus();
-                }
-                
-                if (e.key === 'Escape') {
-                    searchInput.value = '';
-                    performSearch('');
-                    searchInput.blur();
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/10/31/My-test/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2025/10/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
           </div>
         </div>
       </div>
@@ -1177,7 +426,7 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
